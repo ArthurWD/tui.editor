@@ -58,5 +58,4 @@ karma.conf.local.js
 *.vim
 .\#*
 .vscode/
-dist/
  No newline at end of file
