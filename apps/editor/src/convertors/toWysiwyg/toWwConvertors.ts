@@ -12,6 +12,7 @@ import {
   OpenTagToken,
   Renderer,
 } from '@toast-ui/toastmark';
+import { isCustomInline } from '@toast-ui/toastmark/src/commonmark/node';
 import toArray from 'tui-code-snippet/collection/toArray';
 
 import { isElemNode } from '@/utils/dom';
@@ -235,7 +236,7 @@ const toWwConvertors: ToWwConvertorMap = {
   tableCell(state, node, { entering }) {
     if (!(node as TableCellMdNode).ignored) {
       const hasParaNode = (childNode: MdNode | null) =>
-        childNode && (isInlineNode(childNode) || isCustomHTMLInlineNode(state, childNode));
+        childNode && (isInlineNode(childNode) || isCustomInline(childNode) || isCustomHTMLInlineNode(state, childNode));
 
       if (entering) {
         const { tableHeadCell, tableBodyCell, paragraph } = state.schema.nodes;
