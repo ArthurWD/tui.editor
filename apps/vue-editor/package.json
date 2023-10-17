@@ -20,7 +20,7 @@
   "author": "NHN Cloud FE Development Lab <dl_javascript@nhn.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/ArthurWD/tui.editor.git",
     "directory": "apps/vue-editor"
   },
   "license": "MIT",

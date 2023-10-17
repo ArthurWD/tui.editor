@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/ArthurWD/tui.editor.git",
     "directory": "plugins/color-syntax"
   },
   "bugs": {
@@ -49,6 +49,7 @@
     "tui-color-picker": "^2.2.6"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   }
 }

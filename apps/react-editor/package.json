@@ -21,7 +21,7 @@
   "author": "NHN Cloud FE Development Lab <dl_javascript@nhn.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/ArthurWD/tui.editor.git",
     "directory": "apps/react-editor"
   },
   "license": "MIT",
@@ -36,5 +36,8 @@
   },
   "dependencies": {
     "@toast-ui/editor": "^3.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

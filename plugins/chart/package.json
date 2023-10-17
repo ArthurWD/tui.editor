@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/ArthurWD/tui.editor.git",
     "directory": "plugins/chart"
   },
   "bugs": {
@@ -50,6 +50,7 @@
     "@toast-ui/chart": "^4.1.4"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   }
 }
