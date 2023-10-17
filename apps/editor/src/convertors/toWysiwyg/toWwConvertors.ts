@@ -30,6 +30,10 @@ import { includes } from '@/utils/common';
 import { reBR, reHTMLTag, reHTMLComment } from '@/utils/constants';
 import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
 
+function isCustomInline(node: MdNode) {
+  return node.type === 'customInline';
+}
+
 function isBRTag(node: MdNode) {
   return node.type === 'htmlInline' && reBR.test(node.literal!);
 }
@@ -235,7 +239,10 @@ const toWwConvertors: ToWwConvertorMap = {
   tableCell(state, node, { entering }) {
     if (!(node as TableCellMdNode).ignored) {
       const hasParaNode = (childNode: MdNode | null) =>
-        childNode && (isInlineNode(childNode) || isCustomHTMLInlineNode(state, childNode));
+        childNode &&
+        (isInlineNode(childNode) ||
+          isCustomInline(childNode) ||
+          isCustomHTMLInlineNode(state, childNode));
 
       if (entering) {
         const { tableHeadCell, tableBodyCell, paragraph } = state.schema.nodes;
