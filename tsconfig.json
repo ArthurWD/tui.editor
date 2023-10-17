@@ -1,5 +1,15 @@
 {
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "types/**/*", "../../types/**/*"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
+    "paths": {
+      "@/*": ["src/*"],
+      "@t/*": ["types/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable"],
     "skipLibCheck": true,
     "target": "es5",
     "module": "es6",

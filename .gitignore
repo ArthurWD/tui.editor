@@ -59,3 +59,4 @@ karma.conf.local.js
 .\#*
 .vscode/
 dist/
+ No newline at end of file
